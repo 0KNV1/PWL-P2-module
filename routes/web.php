@@ -13,6 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+//praktikum 1
+Route::get('/{id}', function ($id) {
+    echo "Selamat Datang";
+});
+
+Route::get('/about',function() {
+    echo"NIM :2041720250
+         Nama :Ahmad alfaruq
+         Kelas : TI-2D";
 });
