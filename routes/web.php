@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\PageController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,13 +17,25 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-//praktikum 1
-Route::get('/{id}', function ($id) {
-    echo "Selamat Datang";
-});
+//================================================================================================
 
-Route::get('/about',function() {
-    echo"NIM :2041720250
-         Nama :Ahmad alfaruq
-         Kelas : TI-2D";
-});
+//praktikum 1
+// Route::get('/', function ($id) {
+//     echo "Selamat Datang";
+// });
+
+// Route::get('/about',function() {
+//     echo"NIM :2041720250
+//          Nama :Ahmad alfaruq
+//          Kelas : TI-2D";
+// });
+// Route::get('/article/{id}', function ($id) {
+//     echo "ID Artikel saat ini : $id";
+// });
+//================================================================================================
+//praktikum 2.2
+Route::get('/', [PageController::class, 'index']);
+Route::get('/about', [PageController::class, 'about']);
+Route::get('/articles/{id}', [PageController::class, 'articles']);
+//================================================================================================
+
